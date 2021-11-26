@@ -220,17 +220,6 @@ anychart.onDocumentReady(function () {
           '<br/><span style="color:#212121; font-size: 11px;">Daq click en un municipio para seleccionarlo</span>'
         );
         map.padding([0, 0, 20, 0]);
-        var credits = map.credits();
-        credits.enabled(true);
-        credits.url(
-          'https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States'
-        );
-        credits.text(
-          'Data source: https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States'
-        );
-        credits.logoSrc(
-          'https://en.wikipedia.org/static/favicon/wikipedia.ico'
-        );
 
         // set map Geo data
         map.geoData('anychart.maps.oaxaca');
@@ -271,13 +260,13 @@ anychart.onDocumentReady(function () {
           );
         });
         var scale = anychart.scales.ordinalColor([
-          { less: 1 },
-          { from: 79, to: 800 },
-          { from: 800, to: 820 },
-          { from: 820, to: 850 },
-          { from: 850, to: 875 },
-          { from: 875, to: 900 },
-          { greater: 1000 }
+          { less: 10 },
+          { from: 20, to: 30 },
+          { from: 40, to: 50 },
+          { from: 50, to: 60 },
+          { from: 70, to: 80 },
+          { from: 80, to: 90 },
+          { greater: 100 }
         ]);
         scale.colors([
           '#81d4fa',
