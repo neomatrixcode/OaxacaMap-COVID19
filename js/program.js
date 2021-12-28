@@ -19,7 +19,7 @@ anychart.onDocumentReady(function () {
       for (var i = 0; i < data.length; i++) {
         data[i].value = data[i]["Daily Cases"];
         data[i].short = parseInt((''+data[i]["Municipality ID"]).substring(1));
-        data[i].id = parseInt((''+data[i]["Municipality ID"]).substring(1));
+        data[i].id = data[i]["Municipality ID"];
       }
       dataSet = anychart.data.set(data);
       tableChart = getTableChart();
@@ -47,7 +47,7 @@ anychart.onDocumentReady(function () {
         table
           .useHtml(true)
           .contents([
-            ['Selected States Data'],
+            ['Lista de municipios seleccionados'],
             [
               null,
               'Name',
@@ -157,7 +157,7 @@ anychart.onDocumentReady(function () {
       function changeContent(ids) {
         var i;
         var contents = [
-          ['List of Selected States'],
+          ['Lista de municipios seleccionados'],
           [
             null,
             'Municipio',
@@ -238,7 +238,7 @@ anychart.onDocumentReady(function () {
         });
 
         mapSeries = map.choropleth(dataSet);
-        mapSeries.geoIdField('id');
+        mapSeries.geoIdField('CVEGEO');
         mapSeries.labels(null);
         mapSeries.tooltip().useHtml(true);
         mapSeries.tooltip().title().useHtml(true);
@@ -368,7 +368,7 @@ anychart.onDocumentReady(function () {
 
       function getDataId(id) {
         for (var i = 0; i < data.length; i++) {
-          if (data[i].id === id) return data[i];
+          if (parseInt(data[i].id) === parseInt(id)) return data[i];
         }
       }
 
