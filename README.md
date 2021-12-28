@@ -11,5 +11,4 @@ https://oaxaca-map-covid-19.vercel.app/
 
 ## Screenshots
 
-![App Screenshot](https://github.com/neomatrixcode/OaxacaMap-COVID19/blob/master/images/Captura.png?raw=true)
-
+![App Screenshot](https://github.com/neomatrixcode/OaxacaMap-COVID19/blob/master/images/AnimationOaxaca.gif?raw=true)
